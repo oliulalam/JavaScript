@@ -1,0 +1,1 @@
+Javascript is single thread interpreter just-in-time compiled language.
