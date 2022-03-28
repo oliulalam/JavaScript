@@ -1,0 +1,1 @@
+If you aren't dynamically loading scripts or marking them as defer or async , then scripts are loaded in the order encountered in the page.
