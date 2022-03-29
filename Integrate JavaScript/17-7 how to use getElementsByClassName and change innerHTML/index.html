@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exploring DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Exploring DOM</h1>
+
+        <article>
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa porro modi enim esse assumenda! Asperiores, officia voluptas. Eveniet quidem nesciunt assumenda nisi! Maxime, harum asperiores voluptatibus necessitatibus consequatur eligendi enim.</p>
+        </article>
+        <article>
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">At quae, quis assumenda tempore voluptatem consequatur temporibus voluptatibus mollitia atque ex tempora fugit labore quam magnam, itaque aliquam quia distinctio eum dicta! Quis sunt quasi autem harum veniam esse!</p>
+        </article>
+        <article>
+            <h3>article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Omnis obcaecati similique facere ipsam, aliquam id animi eum perferendis ut consequuntur natus fugiat. Aliquam, enim exercitationem. Minus accusantium atque recusandae exercitationem tempora, velit eius ducimus, quaerat voluptatibus deleniti accusamus.</p>
+        </article>
+    </section>
+
+    <script>
+        //ei vabe korle sob author gula ke console.log a dekha jabe
+        var author = document.getElementsByClassName('author');
+        //console.log(author);
+        //for loop use kore console a class name gula ke dekhte pari
+        for (var i=0; i<author.length; i++)
+        {
+            var element = author[i];
+            //console.log(element);
+
+            //author lekha ta ke change korte hole element.innerHTML ="lekhok - " +i (ei i ta holo 0,1,2,3 serial number) ;
+            element.innerHTML ='lekhok - '+ i;
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin = '10px';
+            element.style.fontSize = '50px';
+        }
+    </script>
+</body>
+</html>
